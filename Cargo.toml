@@ -1,6 +1,6 @@
 [package]
 name = "taskbar_interface"
-version = "0.1.0"
+version = "0.1.11"
 edition = "2018"
 license = "MIT"
 description = "An interface to the desktop taskbar"
@@ -11,8 +11,7 @@ keywords = ["taskbar", "interfaces", "ui"]
 categories = ["gui"]
 
 [dependencies]
-raw-window-handle = "0"
-
+raw-window-handle = { git = "https://github.com/PixelCoda/raw-window-handle.git", version = "0.4.31" }
 [target.'cfg(all(unix, not(target_os="macos")))'.dependencies]
 lazy_static = "1"
 x11-dl = "2"
